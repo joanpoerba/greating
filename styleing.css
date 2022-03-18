@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body{
+    width: 100%;
+    background: var(--bg-color);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+:root{
+    --bg-color: white;
+    --font-color: black;
+
+    --bg-btn: rgb(37, 37, 37);
+    --font-btn: white;
+
+    --animated-color: rgb(255, 169, 57);
+    --animated-shadow: #ffc400;
+}
+
+.dark-mode{
+    --bg-color: rgb(0, 0, 0);
+    --font-color: rgb(255, 255, 255);
+
+    --bg-btn: rgb(252, 252, 252);
+    --font-btn: rgb(0, 0, 0);
+
+    --animated-color: rgb(0, 204, 255);
+    --animated-shadow: #43b4ff;
+}
+
+/* animate */
+
+.animated div{
+    position: absolute;
+    width: 3pc;
+    height: 3pc;
+    border: 3px solid var(--animated-color);
+    box-shadow: 0px 0 50px 8px var(--animated-shadow);
+    filter: blur(3px);
+}
+
+.animated div:nth-child(1){
+    top: 12%;
+    left: 12%;
+    animation: animate 10s linear infinite;
+}
+
+.animated div:nth-child(2){
+    top: 30%;
+    left: 28%;
+    animation: animate 10s linear infinite;
+}
+
+.animated div:nth-child(3){
+    top: 9%;
+    left: 45%;
+    animation: animate 10s linear infinite;
+}
+
+.animated div:nth-child(4){
+    top: 23%;
+    left: 64%;
+    animation: animate 10s linear infinite;
+}
+
+.animated div:nth-child(5){
+    top: 2%;
+    left: 83%;
+    animation: animate 10s linear infinite;
+}
+
+.animated div:nth-child(6){
+    top: 54%;
+    left: 12%;
+    animation: animate 10s linear infinite;
+}
+
+.animated div:nth-child(7){
+    top: 70%;
+    left: 28%;
+    animation: animate 10s linear infinite;
+}
+
+.animated div:nth-child(8){
+    top: 45%;
+    left: 45%;
+    animation: animate 10s linear infinite;
+}
+
+.animated div:nth-child(9){
+    top: 60%;
+    left: 64%;
+    animation: animate 10s linear infinite;
+}
+
+.animated div:nth-child(10){
+    top: 40%;
+    left: 83%;
+    animation: animate 10s linear infinite;
+}
+
+
+
+@keyframes animate{
+    0%{
+        transform: scale(0) translateX(0) rotate(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* end animate */
+
+img{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -30;
+}
+
+button{
+    background: var(--bg-btn);
+    margin-top: 10px;
+    margin-left: 10px;
+    color: var(--font-btn);
+    padding: 4px;
+    width: 5pc;
+    height: 2.5pc;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+}
+
+.container h1{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    margin-top: 35vh;
+    color: var(--font-color);
+    font-weight: bold   ;
+}
+
+#red{
+    color: red;
+}
+
+#span{
+    margin-left: 10px;
+    color: rgb(255, 92, 92);
+}
+
+@media only screen and (max-width:600px) {
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .container h1{
+        font-size: 1.3rem;
+    }
+}
